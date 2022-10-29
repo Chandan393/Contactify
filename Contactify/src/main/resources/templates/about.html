@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>This is About Page</title>
+</head>
+
+<body>
+
+	<section>
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-8 offset-md-2 mt-5">
+					<div class="card">
+
+						<div class="card-body">
+
+							<h1 class="text-center text-dark" style="font-size: 50px;">ABOUT</h1>
+
+
+
+							<h1 class="text-center text-dark mt-3 font-weight-light">
+
+								Contactify provide a Smarter and Secure way to Store Different Users Contacts Using
+								Spring Boot,
+								Spring Security, Thymeleaf, JPA, MySQL and Integrating Email Web API for sending OTP for
+								User Verification.
+
+							</h1>
+
+
+
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+
+		</div>
+		<script>
+			$(document).ready(() => {
+
+				$(".nav-link").removeClass("active");
+				$("#about-link").addClass("active");
+
+			});
+
+		</script>
+
+	</section>
+
+</body>
+
+</html>

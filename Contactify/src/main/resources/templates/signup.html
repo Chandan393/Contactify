@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>This is SignUp Page</title>
+</head>
+
+<body>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+
+					<div class="my-card mt-2 mb-3">
+
+						<div th:if="${session.message}" th:classappend="${session.message.type}" class="alert"
+							role="alert">
+							<p class="text-center" th:text="${session.message.content}"></p>
+
+
+							<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+						</div>
+
+						<div class="container text-center">
+							<img style="width:80px;" src="" th:src="@{/img/personal.png}" alt="" />
+						</div>
+
+
+						<h1 class="text-center text-white">Register Here</h1>
+
+						<form novalidate action="" th:action="@{/do_register}" method="post" th:object="${user}">
+							<div class="form-group">
+								<label for="name" class="text-white">Name</label>
+								<input name="name" type="text" class="form-control"
+									th:classappend="${#fields.hasErrors('name') ? 'is-invalid' : ''}" id="name"
+									aria-describedby="nameHelp" placeholder="Enter Your Name" required
+									th:value="${user.name}" />
+								<div class="invalid-feedback" th:each="e :${#fields.errors('name')}" th:text="${e}">
+
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="email" class="text-white">Email</label>
+								<input name="email" type="email" class="form-control"
+									th:classappend="${#fields.hasErrors('email')?'is-invalid': ' ' }" id="email"
+									aria-describedby="emailHelp" placeholder="Enter Your Email" required
+									th:value="${user.email}">
+
+								<div th:each="e : ${#fields.errors('email')}" th:text="${e}" class="invalid-feedback">
+								</div>
+							</div>
+
+
+
+							<div class="form-group">
+								<label for="password" class="text-white">Password</label>
+								<input name="password" type="password" class="form-control"
+									th:classappend="${#fields.hasErrors('password')?'is-invalid': ' ' }" id="password"
+									aria-describedby="passwordHelp" placeholder="Enter Your Password" required>
+
+								<div th:each="e : ${#fields.errors('password')}" th:text="${e}"
+									class="invalid-feedback">
+								</div>
+
+								<div class="form-group">
+									<textarea name="about"
+										th:classappend="${#fields.hasErrors('about')?'is-invalid': ' ' }"
+										placeholder="Enter Something About Yourself" rows="5" class="form-control mt-3"
+										th:text="${user.about}"></textarea>
+									<div th:each="e : ${#fields.errors('about')}" th:text="${e}"
+										class="invalid-feedback">
+									</div>
+
+									<!--Terms and condition Agreement-->
+									<div class="form-group form-check">
+										<input type="checkbox" name="agreement" class="form-check-input"
+											id="agreement" />
+										<label for="agreement" style="color: white" ;>Accept terms and
+											conditions.</label>
+									</div>
+
+									<div class="container text-center">
+										<button type="submit" class="btn bg-primary  text-white">Submit</button>
+
+										<button type="reset" class="btn bg-secondary text-white">Reset</button>
+
+									</div>
+
+
+						</form>
+
+					</div>
+
+
+
+
+				</div>
+
+			</div>
+		</div>
+		<script>
+			$(document).ready(() => {
+
+				$(".nav-link").removeClass("active");
+				$("#signup-link").addClass("active");
+
+			});
+
+		</script>
+	</section>
+</body>
+
+</html>
