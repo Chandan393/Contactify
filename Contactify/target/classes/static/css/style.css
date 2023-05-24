@@ -1,0 +1,152 @@
+body{
+background: #313131 !important;
+}
+.bg-primary {
+     background: #141414 !important;
+}
+
+.banner{
+     width:100%;
+     height:93vh;
+     background:url(../img/Home_Banner.jpg);
+     background-size:cover;
+     color: white;
+     }
+     
+ .my-card {
+ 
+   padding: 20px;
+    background: #595959;
+    border: 1px solid #9C9C9C;
+ }  
+ 
+ 
+ #login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 420px;
+  border: 1px solid #9C9C9C;
+  background-color:    #595959;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}    
+ 
+/* Sidebar Style*/
+
+@media only screen and (max-width: 600px){
+    .sidebar {
+      display: none;
+      width: 80% !important; 
+      background:  #595959;
+      height: 100vh;
+      position: fixed;  
+      padding-top:20px; 
+      }
+      .content {
+   margin-left: 0% !important;
+   
+}
+
+
+
+}
+
+
+.sidebar {
+      width: 18%; 
+      background:  #595959;
+      height: 100%;
+      position: fixed;  
+      padding-top:42px;
+       z-index: 999999999999999999999999999999999; 
+
+}  
+
+.sidebar a{
+    display: block;
+    width: 100%;
+    padding: 10px 25px;
+    text-decoration:none;
+    color: white;
+   
+}
+
+.sidebar a:hover {
+      background:  #313131;
+}
+
+.sidebar .divider {
+    height: .5px;
+    width: 100%;
+    background:  #313131;
+    margin-top: 10px;
+   
+
+}
+
+
+.content {
+   margin-left: 20%;
+   color: white;
+   
+}
+
+.sidebar  .crossBtn {
+    position : absolute;
+    top: 0px;
+    right: 35px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+}
+
+.my_profile_picture {
+    width: 35px;
+    height: 35px;
+    border-radius :50%;
+
+}
+
+
+/* Search CSS */
+
+.search-container {
+  position: relative;
+}
+
+.search-result {
+   position: absolute;
+   width: 100%;
+   padding: 10px;
+   border: 1px solid gray;
+   display: none;
+   
+}
+
+
+.active {
+
+     background: #141414 !important;
+     color: white !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

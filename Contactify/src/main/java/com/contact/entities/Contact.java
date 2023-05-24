@@ -7,7 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -34,11 +33,11 @@ public class Contact {
 	@JsonIgnore
 	private User user;
 
-	public User getUser() {
+	public User getuser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setuser(User user) {
 		this.user = user;
 	}
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="normal/base::Layout(~{::section})">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Home</title>
+</head>
+
+<body>
+	<section>
+		<div class="container">
+			<div class="card mt-5 ml-5 mr-5">
+				<div class="card-body">
+					<div class="container text-center">
+						<img src="" style="height: 200px;width: 200px;" class="my-profile-picture"
+							th:src="@{/img/contact.png}" alt="">
+					</div>
+					<h1 class="text-center mt-3 text-secondary font-italic font-weight-light">
+						Start Adding Your Contact Securely with Contactify
+					</h1>
+					<a th:href="@{/user/add-contact}" class="btn btn-primary btn-block mt-4 text-uppercase d-grid">Add
+						new Contact</a>
+				</div>
+			</div>
+
+		</div>
+		<script>
+			$(document).ready(() => {
+				$(".item").removeClass("active");
+				$("#home-link").addClass("active");
+			})
+		</script>
+	</section>
+</body>
+
+</html>
