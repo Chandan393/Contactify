@@ -33,7 +33,7 @@ public class EmailService {
 
 			@Override
 			protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
-				return new javax.mail.PasswordAuthentication("chandangope555.cg@gmail.com", "wlyamxsyavpohxww");
+				return new javax.mail.PasswordAuthentication("chandangope555.cg@gmail.com", "*your google app password*");
 			}
 		});
 		session.setDebug(true);
